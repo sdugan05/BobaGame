@@ -40,7 +40,9 @@
         </Reference>
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="BobaProjectile.cs" />
         <Compile Include="PlayerController.cs" />
+        <Compile Include="PlayerGroundSensor.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
