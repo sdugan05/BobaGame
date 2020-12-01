@@ -23,12 +23,17 @@ public class PlayerController : MonoBehaviour {
     public GameObject bobaPrefab;
     
     // Spawn point for boba projectile
-    public Transform shootPoint;
+    public GameObject shootPoint;
+    
+    // The player animator
+    private Animator playerAnimator;
     
     // Start is called before the first frame update
     void Start() {
         // Locate the player's rigidbody component
         playerRb = GetComponent<Rigidbody2D>();
+        // Locate player animator component
+        playerAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -56,7 +61,9 @@ public class PlayerController : MonoBehaviour {
         
         // SHOOTING
         if (Input.GetMouseButtonDown(0)) {
-            ShootBoba();
+            // Start shoot animation
+            // ShootBoba() is called inside the animation
+            playerAnimator.SetTrigger("Attack");
         }
     }
     
@@ -70,7 +77,8 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void ShootBoba() {
+        shootPoint.GetComponent<ParticleSystem>().Play();
         Debug.Log("Shot Boba!");
-        Instantiate(bobaPrefab, shootPoint.position, bobaPrefab.transform.rotation);
+        Instantiate(bobaPrefab, shootPoint.transform.position, bobaPrefab.transform.rotation);
     }
 }
