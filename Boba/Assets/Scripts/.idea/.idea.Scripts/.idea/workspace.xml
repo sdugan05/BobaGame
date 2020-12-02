@@ -30,11 +30,16 @@
       <change beforePath="$PROJECT_DIR$/../Prefabs/Boba.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Boba.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Scripts/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scripts/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BobaProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BobaProjectile.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/InspectorExpandedItems.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlayerGroundSensor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PlayerGroundSensor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/GridBrush/UnityEditor.Tilemaps.GridBrush.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/GridBrush/UnityEditor.Tilemaps.GridBrush.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/SceneVisibilityState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/SceneVisibilityState.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/SourceAssetDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/StateCache/Hierarchy/15f7d0-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/StateCache/Hierarchy/15f7d0-mainStage.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/StateCache/Hierarchy/4c969a-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/StateCache/Hierarchy/4c969a-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Library/StateCache/SceneView/cc2798-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Library/StateCache/SceneView/cc2798-mainStage.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,9 +62,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/CharacterController2D.cs" />
-        <option value="$PROJECT_DIR$/PlayerGroundSensor.cs" />
         <option value="$PROJECT_DIR$/BobaProjectile.cs" />
         <option value="$PROJECT_DIR$/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/PlayerGroundSensor.cs" />
       </list>
     </option>
   </component>
@@ -112,7 +117,7 @@
       <workItem from="1606801774565" duration="3265000" />
       <workItem from="1606850318588" duration="1065000" />
       <workItem from="1606853534819" duration="1528000" />
-      <workItem from="1606856522548" duration="3570000" />
+      <workItem from="1606856522548" duration="7038000" />
     </task>
     <task id="LOCAL-00001" summary="Base project">
       <created>1606804703523</created>

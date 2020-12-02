@@ -64,6 +64,7 @@ public class PlayerController : MonoBehaviour {
             // Start shoot animation
             // ShootBoba() is called inside the animation
             playerAnimator.SetTrigger("Attack");
+            Debug.Log("Attack triggered");
         }
     }
     
@@ -78,7 +79,6 @@ public class PlayerController : MonoBehaviour {
 
     private void ShootBoba() {
         shootPoint.GetComponent<ParticleSystem>().Play();
-        Debug.Log("Shot Boba!");
         Instantiate(bobaPrefab, shootPoint.transform.position, bobaPrefab.transform.rotation);
     }
 }
