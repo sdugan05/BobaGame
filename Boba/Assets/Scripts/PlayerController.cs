@@ -24,9 +24,13 @@ public class PlayerController : MonoBehaviour {
     
     // Spawn point for boba projectile
     public GameObject shootPoint;
+    // Amount of boba the player has
+    private int bobaCount = 0;
     
     // The player animator
     private Animator playerAnimator;
+
+    public bool gameStarted;
     
     // Start is called before the first frame update
     void Start() {
@@ -34,6 +38,8 @@ public class PlayerController : MonoBehaviour {
         playerRb = GetComponent<Rigidbody2D>();
         // Locate player animator component
         playerAnimator = GetComponent<Animator>();
+        // Set animation to full boba cup
+        SetAnimState(0);
     }
 
     // Update is called once per frame
@@ -63,8 +69,9 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetMouseButtonDown(0)) {
             // Start shoot animation
             // ShootBoba() is called inside the animation
-            playerAnimator.SetTrigger("Attack");
-            Debug.Log("Attack triggered");
+            if (bobaCount > 0 || !gameStarted) {
+                playerAnimator.SetTrigger("Attack");
+            }
         }
     }
     
@@ -80,5 +87,14 @@ public class PlayerController : MonoBehaviour {
     private void ShootBoba() {
         shootPoint.GetComponent<ParticleSystem>().Play();
         Instantiate(bobaPrefab, shootPoint.transform.position, bobaPrefab.transform.rotation);
+        // Only decrease boba if game is started so you have infinite ammo to hit the button
+        if (gameStarted) {
+            bobaCount--;
+        }
     }
+
+    public void SetAnimState(int animState) {
+        playerAnimator.SetInteger("AnimState", animState);
+    }
+    
 }

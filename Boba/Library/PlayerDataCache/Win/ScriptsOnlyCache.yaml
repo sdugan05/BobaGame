@@ -2,8 +2,11 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - BobaProjectile
+    - GameManager
     - PlayerController
     - PlayerGroundSensor
+    - SpawnManager
+    - StartButton
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
@@ -71,6 +74,12 @@ ScriptsOnlyBuild:
       Script: {instanceID: 14346}
     - Class: 114
       Script: {instanceID: 16046}
+    - Class: 114
+      Script: {instanceID: 27540}
+    - Class: 114
+      Script: {instanceID: 29516}
+    - Class: 114
+      Script: {instanceID: 29524}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -438,7 +447,7 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 76ed53e7167a4331cc59acc59bba6fb5
+      Hash: acfc41d99515185d812b16916cb70a33
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -552,7 +561,7 @@ ScriptsOnlyBuild:
     className: StandaloneInputModule
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 15d1ad2e5f7312cad82053bf897bb7dc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerGroundSensor
@@ -588,11 +597,29 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+      Hash: f7404301e4051374c5863e4efd2ee2a8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BobaProjectile
+  - hash:
+      serializedVersion: 2
+      Hash: 6c14e5a2cdee9baabe01327027b88379
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StartButton
+  - hash:
+      serializedVersion: 2
+      Hash: 7e18f6ddbca968cb8a4b469302f2104e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameManager
+  - hash:
+      serializedVersion: 2
+      Hash: 8296151dcd6add3013d06028703fdd7e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SpawnManager
   platform: 5
   scenePathNames:
   - Assets/Scenes/Game.unity
-  playerPath: C:/Users/Saul/Projects/BobaGame/Boba/Builds/0.2/Boba.exe
+  playerPath: C:/Users/Saul/Projects/BobaGame/Boba/Builds/0.3/Boba.exe
