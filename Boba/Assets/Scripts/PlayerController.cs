@@ -96,5 +96,16 @@ public class PlayerController : MonoBehaviour {
     public void SetAnimState(int animState) {
         playerAnimator.SetInteger("AnimState", animState);
     }
-    
+
+    public int GetBobaCount() {
+        return bobaCount;
+    }
+
+    public void SetBobaCount(int boba) {
+        bobaCount = boba;
+    }
+
+    public void IncrementBobaCount(int inc) {
+        bobaCount += inc;
+    }
 }

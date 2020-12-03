@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - BobaFill
     - BobaProjectile
     - GameManager
     - PlayerController
@@ -10,14 +11,9 @@ ScriptsOnlyBuild:
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
-    - UnityEditor.Tilemaps.GridBrush
-    - UnityEditor.Tilemaps.GridBrushEditor
-    - UnityEditor.Tilemaps.GridPaintPaletteClipboard
-    - UnityEditor.Tilemaps.GridPaintPaletteWindow
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
     - UnityEditor.Tilemaps.GridPalettes
-    - UnityEditor.Tilemaps.PaintableSceneViewGrid
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
@@ -69,17 +65,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 590}
     - Class: 114
-      Script: {instanceID: 13374}
+      Script: {instanceID: 11238}
     - Class: 114
-      Script: {instanceID: 14346}
+      Script: {instanceID: 12146}
     - Class: 114
-      Script: {instanceID: 16046}
+      Script: {instanceID: 12626}
     - Class: 114
-      Script: {instanceID: 27540}
+      Script: {instanceID: 13380}
     - Class: 114
-      Script: {instanceID: 29516}
+      Script: {instanceID: 13588}
     - Class: 114
-      Script: {instanceID: 29524}
+      Script: {instanceID: 14354}
+    - Class: 114
+      Script: {instanceID: 14366}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -103,6 +101,12 @@ ScriptsOnlyBuild:
     - Class: 1839735485
       Script: {instanceID: 0}
   scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: 8296151dcd6add3013d06028703fdd7e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SpawnManager
   - hash:
       serializedVersion: 2
       Hash: 4bc4346a71a8df53a6b106f68ef3a190
@@ -297,6 +301,12 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
+      Hash: cd4c6e77a4c34395dbf766da02e65d3e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BobaFill
+  - hash:
+      serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -343,6 +353,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: ScrollRect
+  - hash:
+      serializedVersion: 2
+      Hash: f4275e5414da4fa83a9b5a43c8020ec2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameManager
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -459,6 +475,12 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
+      Hash: f7404301e4051374c5863e4efd2ee2a8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BobaProjectile
+  - hash:
+      serializedVersion: 2
       Hash: 6939772cb3ce775a8e8d99f332534491
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -573,6 +595,12 @@ ScriptsOnlyBuild:
     className: Toggle
   - hash:
       serializedVersion: 2
+      Hash: 6c14e5a2cdee9baabe01327027b88379
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StartButton
+  - hash:
+      serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -595,31 +623,7 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: f7404301e4051374c5863e4efd2ee2a8
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: BobaProjectile
-  - hash:
-      serializedVersion: 2
-      Hash: 6c14e5a2cdee9baabe01327027b88379
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: StartButton
-  - hash:
-      serializedVersion: 2
-      Hash: 7e18f6ddbca968cb8a4b469302f2104e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GameManager
-  - hash:
-      serializedVersion: 2
-      Hash: 8296151dcd6add3013d06028703fdd7e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SpawnManager
   platform: 5
   scenePathNames:
   - Assets/Scenes/Game.unity
-  playerPath: C:/Users/Saul/Projects/BobaGame/Boba/Builds/0.3/Boba.exe
+  playerPath: C:/Users/Saul/Projects/BobaGame/Boba/Builds/0.4/Boba.exe

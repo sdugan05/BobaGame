@@ -33,5 +33,10 @@ public class BobaProjectile : MonoBehaviour {
             // Tell the button that it has been hit
             other.gameObject.GetComponent<StartButton>().OnHit();
         }
+        else {
+            if (other.gameObject.CompareTag("Player")) {
+                other.gameObject.GetComponent<PlayerController>().IncrementBobaCount(1);
+            }
+        }
     }
 }
