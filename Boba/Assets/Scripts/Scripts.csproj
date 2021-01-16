@@ -42,7 +42,9 @@
     <ItemGroup>
         <Compile Include="BobaFill.cs" />
         <Compile Include="BobaProjectile.cs" />
+        <Compile Include="EnemyController.cs" />
         <Compile Include="GameManager.cs" />
+        <Compile Include="HealthBar.cs" />
         <Compile Include="PlayerController.cs" />
         <Compile Include="PlayerGroundSensor.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
