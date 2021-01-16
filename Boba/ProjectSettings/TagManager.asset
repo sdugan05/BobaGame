@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Button
+  - Ground
+  - PlayerProjectile
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -19,7 +22,7 @@ TagManager:
   - GroundSensor
   - Projectile
   - Button
-  - 
+  - Enemy
   - 
   - 
   - 

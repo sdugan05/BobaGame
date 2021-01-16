@@ -37,6 +37,13 @@ public class BobaProjectile : MonoBehaviour {
             if (other.gameObject.CompareTag("Player")) {
                 other.gameObject.GetComponent<PlayerController>().IncrementBobaCount(1);
             }
-        }
+            else {
+                if (other.gameObject.CompareTag("Enemy") && gameObject.CompareTag("PlayerProjectile")) {
+                    // Call enemy hit function
+                    other.gameObject.GetComponent<EnemyController>().OnHit();
+                }
+            }
+            
+        } 
     }
 }
