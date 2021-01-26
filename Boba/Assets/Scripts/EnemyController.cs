@@ -35,6 +35,7 @@ public class EnemyController : MonoBehaviour {
     // Kill the enemy
     
     private void Die() {
+        gameManagerScript.score += 5;
         Destroy(gameObject);
     }
 

@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
-    public int health = 10;
+    public int health;
     public int score = 0;
 
+    public int maxHealth = 10;
+    
     public GameObject startButton;
     
     // The player
@@ -28,11 +31,10 @@ public class GameManager : MonoBehaviour {
     public bool gameOver;
     public GameObject gameOverText;
 
-    private Scene mainScene;
-    
+    public GameObject scoreText;
+
     // Start is called before the first frame update
     void Start() {
-        mainScene = SceneManager.GetActiveScene();
         
         // Locate player controller script
         playerController = player.GetComponent<PlayerController>();
@@ -40,6 +42,8 @@ public class GameManager : MonoBehaviour {
         spawnManagerScript = spawnManager.GetComponent<SpawnManager>();
         // Locate boba fill script
         bobaFill = bobaFillObj.GetComponent<BobaFill>();
+
+        health = maxHealth;
 
         gameOver = false;
     }
@@ -54,25 +58,36 @@ public class GameManager : MonoBehaviour {
         if (health == 0) {
             GameOver();
         }
+        // Set the UI score text
+        scoreText.GetComponent<Text>().text = score.ToString();
+
     }
     
     // Called when the start button is hit
     public void OnStartButton() {
+        
+        
+        // Reset vars
+        gameOverText.SetActive(false);
+        score = 0;
+        health = maxHealth;
          // Set the player cup to empty
         bobaFill.bobaAnimator.SetBool("Default", false);
         playerController.SetAnimState(1);
         // Set playercontroller gamestarted to true
         playerController.gameStarted = true;
-        
+        spawnManagerScript.enemySpawnRate = 10f;
         spawnManagerScript.SetSpawningEnabled(true);
        
     }
 
     private void GameOver() {
-        spawnManagerScript.StopBobaSpawning(1);
+        // Stop spawning things, show a game over text, give player infinite ammo, set animation state to default from the start of the game
+        spawnManagerScript.StopBobaSpawning();
         gameOverText.SetActive(true);
         playerController.gameStarted = false;
         bobaFill.bobaAnimator.SetBool("Default", true);
         playerController.SetAnimState(0);
+        startButton.SetActive(true);
     }
 }

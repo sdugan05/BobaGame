@@ -11,7 +11,7 @@ public class SpawnManager : MonoBehaviour {
     public GameObject enemyPrefab;
     
     // Bool for whether or not to spawn boba
-    private bool spawningEnabled;
+    public bool spawningEnabled;
     
     // Spawn range for boba
     private float spawnRangeX = 4.5f;
@@ -19,16 +19,19 @@ public class SpawnManager : MonoBehaviour {
 
     // How often to spawn boba (seconds)
     public float bobaSpawnRate = 0.5f;
+    private float bobaSpawnTimer;
 
     public GameObject[] enemies;
     
     // time to wait before spawning enemies after boba pickups start
-    private float enemySpawnRate = 10f;
-    private float timer;
+    public float enemySpawnRate = 10f;
+    private float enemySpawnTimer;
+    private float enemySpawnRateMin = 1.2f;
+    private float enemySpawnRateMax = 2.5f;
 
     // Start is called before the first frame update
     void Start() {
-        InvokeRepeating("SpawnBoba", 1, bobaSpawnRate);
+        
     }
 
     // Update is called once per frame
@@ -36,15 +39,20 @@ public class SpawnManager : MonoBehaviour {
 
         if (spawningEnabled) {
             // Enemy spawning
-            timer += Time.deltaTime;
-            if (timer >= enemySpawnRate) {
+            enemySpawnTimer += Time.deltaTime;
+            if (enemySpawnTimer >= enemySpawnRate) {
                 // actual spawn rate
-                enemySpawnRate = 1.5f;
-                timer = 0f;
+                enemySpawnRate = Random.Range(enemySpawnRateMin, enemySpawnRateMax);
+                enemySpawnTimer = 0f;
                 SpawnEnemy();
             }
+
+            bobaSpawnTimer += Time.deltaTime;
+            if (bobaSpawnTimer >= bobaSpawnRate) {
+                bobaSpawnTimer = 0;
+                SpawnBoba();
+            }
         }
-        
     }
 
     // Setter for prefab spawning
@@ -63,39 +71,21 @@ public class SpawnManager : MonoBehaviour {
     }
     
     // Enemy spawning
-
     private void SpawnEnemy() {
         if (spawningEnabled) {
             Instantiate(enemyPrefab, GenerateRandomSpawnPos(), enemyPrefab.transform.rotation);
         }
     }
     
-    
-    
     // Boba pickup spawning
-    
     private void SpawnBoba() {
         if (spawningEnabled) {
             Instantiate(bobaPrefab, GenerateRandomSpawnPos(), bobaPrefab.transform.rotation);
         }
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    // Public function to stop boba from spawning after a certain amount of seconds has passed
-    public void StopBobaSpawning(int secondsToWait) {
-        StartCoroutine(StopBoba(secondsToWait));
-    }
-
-    private IEnumerator StopBoba(int secondsToWait) {
-        yield return new WaitForSeconds(secondsToWait);
+   
+    // Public function to stop boba from spawning
+    public void StopBobaSpawning() {
         SetSpawningEnabled(false);
     }
 }
